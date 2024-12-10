@@ -1,7 +1,7 @@
-name: Feature request
-description: Suggest an idea for this project
+name: "\U0001F680 New feature proposal"
+description: Propose a new feature to be added to one if not all our services
 title: "[Feature]: "
-labels: ["feature request", "enhancement", "feature"]
+labels: ["c: new feature"]
 body:
   - type: markdown
     attributes:
@@ -36,6 +36,18 @@ body:
       label: Proposed Solution
       description: How should this be solved?
       placeholder: How do you think this should be implemented?
+    validations:
+      required: true
+  - type: dropdown
+    id: target
+    attributes:
+      label: Target HSS Software
+      description: Which software within HSS should utilize this feature?
+      multiple: true
+      options: 
+        - HilDesktop
+        - HilMobile
+        - HSS-Web
     validations:
       required: true
   - type: textarea
